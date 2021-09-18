@@ -2,11 +2,34 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/material/material.module';
+import { UserModule } from './user/user.module';
+import { TaskModule } from './task/task.module';
+
+import { TasksComponent } from './svc/tasks/tasks.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        UserModule,
+        TaskModule,
+        BrowserModule,
+        MaterialModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FlexLayoutModule,
+        BrowserAnimationsModule,
       ],
       declarations: [
         AppComponent

@@ -45,12 +45,13 @@ export class CreateComponentDialog implements OnInit {
           console.log(tl);
           this.dialogRef.close({ data: res });
         });
+      } else {
+        this.dialogRef.close({ data: res });
       }
     });
   }
 
   onStartNow() {
-
     this.onSubmit(true);
   }
 
